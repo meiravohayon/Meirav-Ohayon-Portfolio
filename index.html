@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meirav Ohayon — Paintings</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <h1 class="site-title">Meirav Ohayon</h1>
+  <nav class="site-nav">
+    <a href="#gallery">Paintings</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section id="gallery" class="gallery" aria-label="Painting gallery"></section>
+
+  <section id="about" class="about">
+    <h2>About</h2>
+    <p>Write a short artist statement here — your background, what draws you to painting, and what you're currently exploring in your work.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:meirav.ohayonziv@gmail.com">meirav.ohayonziv@gmail.com</a></p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Meirav Ohayon</p>
+</footer>
+
+<div id="lightbox" class="lightbox" hidden>
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <div class="lightbox-content">
+    <div id="lightbox-image" class="lightbox-image"></div>
+    <div class="lightbox-caption">
+      <h3 id="lightbox-title"></h3>
+      <p id="lightbox-meta"></p>
+      <p id="lightbox-description"></p>
+    </div>
+  </div>
+</div>
+
+<script src="paintings.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
