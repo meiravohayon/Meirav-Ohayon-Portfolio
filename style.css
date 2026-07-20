@@ -106,6 +106,12 @@ a {
   justify-content: center;
   position: relative;
   min-height: 120px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease;
+}
+
+.painting:hover .painting-image {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
 }
 
 .painting-image img {
