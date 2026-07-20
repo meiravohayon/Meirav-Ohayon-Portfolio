@@ -17,7 +17,11 @@ function renderThumb(p) {
     : `<span class="placeholder-label">${p.title}</span>`;
 }
 
-function openLightbox(p) {
+let currentIndex = -1;
+
+function openLightbox(index) {
+  currentIndex = index;
+  const p = PAINTINGS[currentIndex];
   lightboxImage.innerHTML = p.image
     ? `<img src="${p.image}" alt="${p.title}">`
     : `<span class="placeholder-label">${p.title}</span>`;
@@ -33,7 +37,15 @@ function closeLightbox() {
   document.body.style.overflow = "";
 }
 
-function createPaintingButton(p) {
+function showPrev() {
+  openLightbox((currentIndex - 1 + PAINTINGS.length) % PAINTINGS.length);
+}
+
+function showNext() {
+  openLightbox((currentIndex + 1) % PAINTINGS.length);
+}
+
+function createPaintingButton(p, index) {
   const button = document.createElement("button");
   button.className = "painting";
   button.innerHTML = `
@@ -43,35 +55,40 @@ function createPaintingButton(p) {
       <p>${meta(p)}</p>
     </span>
   `;
-  button.addEventListener("click", () => openLightbox(p));
+  button.addEventListener("click", () => openLightbox(index));
   return button;
 }
 
 for (let i = 0; i < PAINTINGS.length; ) {
   const p = PAINTINGS[i];
   if (p.group) {
-    const groupItems = [p];
-    let j = i + 1;
+    const groupItems = [];
+    let j = i;
     while (j < PAINTINGS.length && PAINTINGS[j].group === p.group) {
-      groupItems.push(PAINTINGS[j]);
+      groupItems.push(j);
       j++;
     }
     const row = document.createElement("div");
     row.className = "painting-group";
     row.style.setProperty("--group-size", groupItems.length);
-    groupItems.forEach((item) => row.appendChild(createPaintingButton(item)));
+    groupItems.forEach((idx) => row.appendChild(createPaintingButton(PAINTINGS[idx], idx)));
     gallery.appendChild(row);
     i = j;
   } else {
-    gallery.appendChild(createPaintingButton(p));
+    gallery.appendChild(createPaintingButton(p, i));
     i++;
   }
 }
 
 document.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
+document.querySelector(".lightbox-prev").addEventListener("click", showPrev);
+document.querySelector(".lightbox-next").addEventListener("click", showNext);
 lightbox.addEventListener("click", (e) => {
   if (e.target === lightbox) closeLightbox();
 });
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
+  if (lightbox.hidden) return;
+  if (e.key === "Escape") closeLightbox();
+  if (e.key === "ArrowLeft") showPrev();
+  if (e.key === "ArrowRight") showNext();
 });
