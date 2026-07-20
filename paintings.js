@@ -5,6 +5,9 @@
 // Title, year, medium, and size are parsed from each photo's filename in
 // images/. To change a painting's details, rename its file in that folder
 // using the same "Title, Year, Medium, Size.jpg" pattern.
+//
+// Paintings are displayed chronologically by year (see script.js) — order
+// here doesn't matter for display, except consecutive same-`group` entries.
 const PAINTINGS = [
   {
     title: "Madrid",
@@ -15,10 +18,10 @@ const PAINTINGS = [
     description: "",
   },
   {
-    title: "The Long Man",
+    title: "Sleeping",
     year: 2025,
     medium: "Mixed media on canvas",
-    size: "69.5 x 88 cm",
+    size: "88 x 240 cm",
     image: "images/The long man, 2025, mixed media on canvas 69.5x88 cm.jpg",
     description: "",
   },
@@ -123,6 +126,105 @@ const PAINTINGS = [
     medium: "Mixed media on canvas",
     size: "96 x 61 cm",
     image: "images/Untitled, 2026, mixed media on canvas 96x61cm.jpg",
+    description: "",
+  },
+  {
+    title: "Untitled",
+    year: 2025,
+    medium: "Mixed media on canvas",
+    size: "50 x 73 cm",
+    image: "images/Untitled, 2025, mixed media on canvas 50x73.PNG",
+    description: "",
+  },
+  {
+    title: "Pickok",
+    year: 2024,
+    medium: "Mixed media on canvas",
+    size: "100 x 240 cm",
+    image: "images/Pickok, 2024, mixed media on canvas 100x240 cm.jpg",
+    description: "",
+  },
+  {
+    title: "Sleeping",
+    year: 2022,
+    medium: "Mixed media on canvas",
+    size: "90 x 240 cm",
+    image: "images/Sleeping, 2022, mixed media on canvas 90x240cm.jpg",
+    description: "",
+  },
+  {
+    title: "Sleeping",
+    year: 2025,
+    medium: "Mixed media on canvas",
+    size: "100 x 240 cm",
+    image: "images/Sleeping, 2025, mixed media on canvas 100x240cm.jpg",
+    description: "",
+  },
+  {
+    title: "The American Colony",
+    year: 2025,
+    medium: "Mixed media on canvas",
+    size: "88 x 240 cm",
+    image: "images/The American Colony, 2025, mixed media on canvas 88x240 cm.jpg",
+    description: "",
+  },
+  {
+    title: "Untitled",
+    year: 2022,
+    medium: "Mixed media on canvas",
+    size: "90 x 240 cm",
+    image: "images/Untitled, 2022, mixed media on canvas 90x240cm.jpg",
+    description: "",
+  },
+  {
+    title: "Untitled",
+    year: 2024,
+    medium: "Mixed media on canvas",
+    size: "100 x 240 cm",
+    image: "images/Untitled, 2024, mixed media on canvas 100x240 cm.jpg",
+    description: "",
+  },
+  {
+    title: "Tiktok Milchama",
+    year: 2025,
+    medium: "Mixed media on canvas",
+    size: "88 x 240 cm",
+    image: "images/tiktok milchama, 2025, mixed media on canvas 88x240 cm.jpg",
+    description: "",
+  },
+  {
+    title: "Untitled",
+    year: 2025,
+    medium: "Mixed media on canvas",
+    size: "100 x 240 cm",
+    image: "images/untitled, 2025, mixed media on canvas 100x240cm.jpg",
+    description: "",
+  },
+  {
+    // Split from one photo showing 2 canvases side by side, labeled as a
+    // pair ("90x240cm" for the pair) — please confirm each one's actual
+    // individual size.
+    title: "Sleeping",
+    year: 2023,
+    medium: "Mixed media on canvas",
+    size: "",
+    image: "images/Sleeping A, 2023, mixed media on canvas 90x240cm.jpg",
+    description: "",
+  },
+  {
+    title: "Sleeping",
+    year: 2023,
+    medium: "Mixed media on canvas",
+    size: "",
+    image: "images/Sleeping B, 2023, mixed media on canvas 90x240cm.jpg",
+    description: "",
+  },
+  {
+    title: "Untitled",
+    year: 2025,
+    medium: "Mixed media on plaid fabric",
+    size: "200 x 190 cm",
+    image: "images/untitled, 2025, mixed media on plaid fabric, 200x190cm.jpg",
     description: "",
   },
 ];

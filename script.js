@@ -59,26 +59,40 @@ function createPaintingButton(p, index) {
   return button;
 }
 
+// Build render units (single paintings or grouped rows), then sort them
+// chronologically by year (oldest first; undated pieces go last).
+const units = [];
 for (let i = 0; i < PAINTINGS.length; ) {
   const p = PAINTINGS[i];
   if (p.group) {
-    const groupItems = [];
+    const indices = [];
     let j = i;
     while (j < PAINTINGS.length && PAINTINGS[j].group === p.group) {
-      groupItems.push(j);
+      indices.push(j);
       j++;
     }
-    const row = document.createElement("div");
-    row.className = "painting-group";
-    row.style.setProperty("--group-size", groupItems.length);
-    groupItems.forEach((idx) => row.appendChild(createPaintingButton(PAINTINGS[idx], idx)));
-    gallery.appendChild(row);
+    const years = indices.map((idx) => PAINTINGS[idx].year).filter(Boolean);
+    units.push({ indices, year: years.length ? Math.min(...years) : Infinity });
     i = j;
   } else {
-    gallery.appendChild(createPaintingButton(p, i));
+    units.push({ indices: [i], year: p.year || Infinity });
     i++;
   }
 }
+
+units.sort((a, b) => a.year - b.year);
+
+units.forEach((unit) => {
+  if (unit.indices.length > 1) {
+    const row = document.createElement("div");
+    row.className = "painting-group";
+    row.style.setProperty("--group-size", unit.indices.length);
+    unit.indices.forEach((idx) => row.appendChild(createPaintingButton(PAINTINGS[idx], idx)));
+    gallery.appendChild(row);
+  } else {
+    gallery.appendChild(createPaintingButton(PAINTINGS[unit.indices[0]], unit.indices[0]));
+  }
+});
 
 document.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
 document.querySelector(".lightbox-prev").addEventListener("click", showPrev);
