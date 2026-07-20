@@ -148,7 +148,7 @@ a {
 .painting-image {
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(135deg, #e8e4dc, #d8d2c6);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -175,14 +175,6 @@ const PAINTINGS = [
     group: "trio-1",
   },
   {
-    title: "Sleeping",
-    year: 2025,
-    medium: "Mixed media on canvas",
-    size: "100 x 240 cm",
-    image: "images/Sleeping, 2025, mixed media on canvas 100x240cm.jpg",
-    description: "",
-  },
-  {
     title: "The American Colony",
     year: 2025,
     medium: "Mixed media on canvas",
@@ -223,6 +215,51 @@ const PAINTINGS = [
     medium: "Mixed media on canvas",
     size: "",
     image: "images/Sleeping B, 2023, mixed media on canvas 90x240cm.jpg",
+    description: "",
+  },
+  {
+    // No details in the filename (IMG_5618.jpg) — please send title/year/
+    // medium/size when you have them.
+    title: "Untitled",
+    year: "",
+    medium: "",
+    size: "",
+    image: "images/IMG_5618.jpg",
+    description: "",
+  },
+  {
+    title: "Sleeping",
+    year: 2024,
+    medium: "Mixed media on canvas",
+    size: "50 x 70 cm",
+    image: "images/Sleeping, 2024, mixed media on canvas 50x70cm.jpg",
+    description: "",
+  },
+  {
+    // Photo shows 2 canvases together, kept as one image per your request.
+    title: "Sleeping",
+    year: 2024,
+    medium: "Mixed media on canvas",
+    size: "90 x 240 cm",
+    image: "images/Sleeping, 2024, mixed media on canvas 90x240cm.jpg",
+    description: "",
+  },
+  {
+    // Photo shows 4 separate A3 works together, kept as one image per your
+    // request.
+    title: "Untitled",
+    year: 2025,
+    medium: "Mixed media on paper",
+    size: "A3",
+    image: "images/Untitled, 2025, mixed media on paper A3.JPG",
+    description: "",
+  },
+  {
+    title: "Listening",
+    year: 2024,
+    medium: "Acrylic on canvas paper",
+    size: "38 x 38 cm",
+    image: "images/listening, 2024, acrylic on canva paper, 38x38 cm.jpg",
     description: "",
   },
   {
