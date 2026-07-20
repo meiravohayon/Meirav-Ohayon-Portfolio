@@ -7,7 +7,9 @@
 // using the same "Title, Year, Medium, Size.jpg" pattern.
 //
 // Paintings are displayed chronologically by year (see script.js) — order
-// here doesn't matter for display, except consecutive same-`group` entries.
+// here doesn't matter for display, except consecutive same-`group` entries,
+// which are always shown together as one row (using the earliest year among
+// them to decide where that row falls chronologically).
 const PAINTINGS = [
   {
     title: "Madrid",
@@ -145,12 +147,32 @@ const PAINTINGS = [
     description: "",
   },
   {
+    // Grouped together at your request — shown as one row.
+    title: "Untitled",
+    year: 2022,
+    medium: "Mixed media on canvas",
+    size: "100 x 240 cm",
+    image: "images/untitled, 2022, mixed media on canvas 100x240cm.jpg",
+    description: "",
+    group: "trio-1",
+  },
+  {
     title: "Sleeping",
     year: 2022,
     medium: "Mixed media on canvas",
     size: "90 x 240 cm",
     image: "images/Sleeping, 2022, mixed media on canvas 90x240cm.jpg",
     description: "",
+    group: "trio-1",
+  },
+  {
+    title: "Untitled",
+    year: 2022,
+    medium: "Mixed media on canvas",
+    size: "90 x 240 cm",
+    image: "images/Untitled, 2022, mixed media on canvas 90x240cm.jpg",
+    description: "",
+    group: "trio-1",
   },
   {
     title: "Sleeping",
@@ -170,14 +192,6 @@ const PAINTINGS = [
   },
   {
     title: "Untitled",
-    year: 2022,
-    medium: "Mixed media on canvas",
-    size: "90 x 240 cm",
-    image: "images/Untitled, 2022, mixed media on canvas 90x240cm.jpg",
-    description: "",
-  },
-  {
-    title: "Untitled",
     year: 2024,
     medium: "Mixed media on canvas",
     size: "100 x 240 cm",
@@ -190,14 +204,6 @@ const PAINTINGS = [
     medium: "Mixed media on canvas",
     size: "88 x 240 cm",
     image: "images/tiktok milchama, 2025, mixed media on canvas 88x240 cm.jpg",
-    description: "",
-  },
-  {
-    title: "Untitled",
-    year: 2025,
-    medium: "Mixed media on canvas",
-    size: "100 x 240 cm",
-    image: "images/untitled, 2025, mixed media on canvas 100x240cm.jpg",
     description: "",
   },
   {
