@@ -199,22 +199,12 @@ const PAINTINGS = [
     description: "",
   },
   {
-    // Split from one photo showing 2 canvases side by side, labeled as a
-    // pair ("90x240cm" for the pair) — please confirm each one's actual
-    // individual size.
+    // Photo shows 2 canvases together, kept as one image per your request.
     title: "Sleeping",
     year: 2023,
     medium: "Mixed media on canvas",
-    size: "",
-    image: "images/Sleeping A, 2023, mixed media on canvas 90x240cm.jpg",
-    description: "",
-  },
-  {
-    title: "Sleeping",
-    year: 2023,
-    medium: "Mixed media on canvas",
-    size: "",
-    image: "images/Sleeping B, 2023, mixed media on canvas 90x240cm.jpg",
+    size: "90 x 240 cm",
+    image: "images/Sleeping, 2023, mixed media on canvas 90x240cm.jpg",
     description: "",
   },
   {
