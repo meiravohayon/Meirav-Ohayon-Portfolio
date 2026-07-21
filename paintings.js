@@ -28,11 +28,11 @@ const PAINTINGS = [
     description: "",
   },
   {
-    title: "Carnabos",
+    title: "Carbaros",
     year: 2026,
     medium: "Charcoal and ink on paper",
     size: "100 x 70 cm",
-    image: "images/Carnabos, 2026, charcoal&ink on paper, 100x70.jpg",
+    image: "images/Carbaros, 2026, charcoal&ink on paper, 100x70.jpg",
     description: "",
   },
   {
@@ -208,13 +208,11 @@ const PAINTINGS = [
     description: "",
   },
   {
-    // No details in the filename (IMG_5618.jpg) — please send title/year/
-    // medium/size when you have them.
     title: "Untitled",
-    year: "",
-    medium: "",
-    size: "",
-    image: "images/IMG_5618.jpg",
+    year: 2025,
+    medium: "Acrylic on canvas",
+    size: "52 x 70 cm",
+    image: "images/Untitled, 2025, acrylic on canvas 52x70.jpg",
     description: "",
   },
   {
@@ -241,7 +239,7 @@ const PAINTINGS = [
     year: 2025,
     medium: "Mixed media on paper",
     size: "A3",
-    image: "images/Untitled, 2025, mixed media on paper A3.JPG",
+    image: "images/Untitled, 2025, mixed media on paper A3.jpg",
     description: "",
   },
   {
