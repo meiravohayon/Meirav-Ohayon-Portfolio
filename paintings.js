@@ -20,10 +20,10 @@ const PAINTINGS = [
     description: "",
   },
   {
-    title: "Sleeping",
+    title: "The Long Man",
     year: 2025,
     medium: "Mixed media on canvas",
-    size: "88 x 240 cm",
+    size: "69.5 x 88 cm",
     image: "images/The long man, 2025, mixed media on canvas 69.5x88 cm.jpg",
     description: "",
   },
@@ -183,11 +183,11 @@ const PAINTINGS = [
     description: "",
   },
   {
-    title: "Untitled",
+    title: "Leopards",
     year: 2024,
     medium: "Mixed media on canvas",
     size: "100 x 240 cm",
-    image: "images/Untitled, 2024, mixed media on canvas 100x240 cm.jpg",
+    image: "images/Leopards, 2024, mixed media on canvas 100x240 cm.jpg",
     description: "",
   },
   {
